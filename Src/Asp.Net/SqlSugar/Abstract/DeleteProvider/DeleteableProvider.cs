@@ -52,12 +52,12 @@ namespace SqlSugar
         }
         public Task<int> ExecuteCommandAsync()
         {
-            return Task.FromResult(ExecuteCommand());
+            return TaskExtension.FromResult(ExecuteCommand());
         }
 
         public Task<bool> ExecuteCommandHasChangeAsync()
         {
-            return Task.FromResult(ExecuteCommandHasChange());
+            return TaskExtension.FromResult(ExecuteCommandHasChange());
         }
         public IDeleteable<T> AS(string tableName)
         {

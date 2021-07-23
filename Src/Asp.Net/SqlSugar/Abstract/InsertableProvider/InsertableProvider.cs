@@ -133,23 +133,23 @@ namespace SqlSugar
         }
         public Task<int> ExecuteCommandAsync()
         {
-           return Task.FromResult(ExecuteCommand());
+           return TaskExtension.FromResult(ExecuteCommand());
         }
         public Task<int> ExecuteReturnIdentityAsync()
         {
-            return Task.FromResult(ExecuteReturnIdentity());
+            return TaskExtension.FromResult(ExecuteReturnIdentity());
         }
         public Task<T> ExecuteReturnEntityAsync()
         {
-            return Task.FromResult(ExecuteReturnEntity());
+            return TaskExtension.FromResult(ExecuteReturnEntity());
         }
         public Task<bool> ExecuteCommandIdentityIntoEntityAsync()
         {
-            return Task.FromResult(ExecuteCommandIdentityIntoEntity());
+            return TaskExtension.FromResult(ExecuteCommandIdentityIntoEntity());
         }
         public Task<long> ExecuteReturnBigIdentityAsync()
         {
-            return Task.FromResult(ExecuteReturnBigIdentity());
+            return TaskExtension.FromResult(ExecuteReturnBigIdentity());
         }
         #endregion
 

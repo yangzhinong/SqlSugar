@@ -826,125 +826,125 @@ namespace SqlSugar
         #region Async methods
         public Task<T> SingleAsync()
         {
-             return Task.FromResult(Single());
+             return TaskExtension.FromResult(Single());
         }
 
         public Task<T> SingleAsync(Expression<Func<T, bool>> expression)
         {
-            return Task.FromResult(Single(expression));
+            return TaskExtension.FromResult(Single(expression));
         }
 
         public Task<T> FirstAsync()
         {
-            return Task.FromResult(First());
+            return TaskExtension.FromResult(First());
         }
 
         public Task<T> FirstAsync(Expression<Func<T, bool>> expression)
         {
-            return Task.FromResult(First(expression));
+            return TaskExtension.FromResult(First(expression));
         }
 
         public Task<bool> AnyAsync(Expression<Func<T, bool>> expression)
         {
-            return Task.FromResult(Any(expression));
+            return TaskExtension.FromResult(Any(expression));
         }
 
         public Task<bool> AnyAsync()
         {
-            return Task.FromResult(Any());
+            return TaskExtension.FromResult(Any());
         }
 
         public Task<int> CountAsync()
         {
-            return Task.FromResult(Count());
+            return TaskExtension.FromResult(Count());
         }
         public Task<int> CountAsync(Expression<Func<T, bool>> expression)
         {
-            return Task.FromResult(Count(expression));
+            return TaskExtension.FromResult(Count(expression));
         }
         public Task<TResult> MaxAsync<TResult>(string maxField)
         {
-            return Task.FromResult(Max<TResult>(maxField));
+            return TaskExtension.FromResult(Max<TResult>(maxField));
         }
 
         public Task<TResult> MaxAsync<TResult>(Expression<Func<T, TResult>> expression)
         {
-            return Task.FromResult(Max<TResult>(expression));
+            return TaskExtension.FromResult(Max<TResult>(expression));
         }
 
         public Task<TResult> MinAsync<TResult>(string minField)
         {
-            return Task.FromResult(Min<TResult>(minField));
+            return TaskExtension.FromResult(Min<TResult>(minField));
         }
 
         public Task<TResult> MinAsync<TResult>(Expression<Func<T, TResult>> expression)
         {
-            return Task.FromResult(Min<TResult>(expression));
+            return TaskExtension.FromResult(Min<TResult>(expression));
         }
 
         public Task<TResult> SumAsync<TResult>(string sumField)
         {
-            return Task.FromResult(Sum<TResult>(sumField));
+            return TaskExtension.FromResult(Sum<TResult>(sumField));
         }
 
         public Task<TResult> SumAsync<TResult>(Expression<Func<T, TResult>> expression)
         {
-            return Task.FromResult(Sum<TResult>(expression));
+            return TaskExtension.FromResult(Sum<TResult>(expression));
         }
 
         public Task<TResult> AvgAsync<TResult>(string avgField)
         {
-            return Task.FromResult(Avg<TResult>(avgField));
+            return TaskExtension.FromResult(Avg<TResult>(avgField));
         }
 
         public Task<TResult> AvgAsync<TResult>(Expression<Func<T, TResult>> expression)
         {
-            return Task.FromResult(Avg<TResult>(expression));
+            return TaskExtension.FromResult(Avg<TResult>(expression));
         }
 
         public Task<List<T>> ToListAsync()
         {
-            return Task.FromResult(ToList());
+            return TaskExtension.FromResult(ToList());
         }
 
         public Task<string> ToJsonAsync()
         {
-            return Task.FromResult(ToJson());
+            return TaskExtension.FromResult(ToJson());
         }
 
         public Task<string> ToJsonPageAsync(int pageIndex, int pageSize)
         {
-            return Task.FromResult(ToJsonPage(pageIndex,pageSize));
+            return TaskExtension.FromResult(ToJsonPage(pageIndex,pageSize));
         }
 
         public Task<string> ToJsonPageAsync(int pageIndex, int pageSize,ref  int totalNumber)
         {
-            return Task.FromResult(ToJsonPage(pageIndex, pageSize,ref totalNumber));
+            return TaskExtension.FromResult(ToJsonPage(pageIndex, pageSize,ref totalNumber));
         }
 
         public Task<DataTable> ToDataTableAsync()
         {
-            return Task.FromResult(ToDataTable());
+            return TaskExtension.FromResult(ToDataTable());
         }
 
         public Task<DataTable> ToDataTablePageAsync(int pageIndex, int pageSize)
         {
-            return Task.FromResult(ToDataTablePage(pageIndex,pageSize));
+            return TaskExtension.FromResult(ToDataTablePage(pageIndex,pageSize));
         }
 
         public Task<DataTable> ToDataTablePageAsync(int pageIndex, int pageSize,ref  int totalNumber)
         {
-            return Task.FromResult(ToDataTablePage(pageIndex, pageSize,ref totalNumber));
+            return TaskExtension.FromResult(ToDataTablePage(pageIndex, pageSize,ref totalNumber));
         }
 
         public Task<List<T>> ToPageListAsync(int pageIndex, int pageSize)
         {
-            return Task.FromResult(ToPageList(pageIndex,pageSize));
+            return TaskExtension.FromResult(ToPageList(pageIndex,pageSize));
         }
 
         public Task<List<T>> ToPageListAsync(int pageIndex, int pageSize, ref int totalNumber)
         {
-            return Task.FromResult(ToPageList(pageIndex, pageSize,ref totalNumber));
+            return TaskExtension.FromResult(ToPageList(pageIndex, pageSize,ref totalNumber));
         }
         #endregion
 
